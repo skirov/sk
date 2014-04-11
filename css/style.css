@@ -1,0 +1,207 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:300,700);
+
+html, body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	-webkit-user-select: none;
+	cursor: default;
+	overflow: hidden;
+}
+
+html {
+	background: #eaeaea;
+}
+
+body {
+	background: url(../images/bg.png) top left;
+	background-repeat: repeat-x repeat-y;
+	color: #45535F;
+	font-family: 'Roboto';
+	width: 100%;
+	-webkit-transition: background-position 5s;
+	transition: background-position 5s;
+}
+
+/**
+ * Animations
+ */
+@-webkit-keyframes showSocial {
+    0% {
+    	height: 0px;
+    }
+
+    100% {
+    	height: 100px;
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+    	opacity: 0;
+    }
+    100% {
+    	opacity: 1;
+    }
+}
+
+@-webkit-keyframes slidePosition {
+    0% {
+    	width: 0;
+    	text-indent: -500px;
+    }
+    100% {
+    	width: 100%;
+    	text-indent: 290px;
+    }
+}
+@keyframes showSocial {
+    0% {
+    	height: 0px;
+    }
+
+    100% {
+    	height: 100px;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+    	opacity: 0;
+    }
+    100% {
+    	opacity: 1;
+    }
+}
+
+@keyframes slidePosition {
+    0% {
+    	width: 0;
+    	text-indent: -500px;
+    }
+    100% {
+    	width: 100%;
+    	text-indent: 290px;
+    }
+}
+
+#kExtension.active {
+	-webkit-animation: showSocial ease-out 1s;
+	animation:         showSocial ease-out 1s;
+	height: 100px;
+}
+
+#content.fadeContent,
+#logo {
+	-webkit-animation: fadeIn ease-out 1s;
+	animation:         fadeIn ease-out 1s;
+	opacity: 1;
+}
+
+#position.slidePosition {
+	-webkit-animation: slidePosition ease-out .5s;
+	animation:         slidePosition ease-out .5s;
+	width: 100%;
+    text-indent: 290px;
+}
+
+/*End animation styles*/
+
+
+
+#wrapper {
+	margin: 0 auto;
+	height: 100%;
+	width: 960px;
+}
+
+header {
+	background: #3B454E;
+	height: 50px;
+	line-height: 50px;
+	text-align: right;
+}
+
+header:hover {
+	
+}
+
+nav {
+	width: 960px;
+	margin: 0 auto;
+}
+
+nav a {
+	display: inline-block;
+	text-decoration: none;
+	margin-right: 30px;
+	color: #ccc;
+}
+
+nav a:hover {
+	color: #FF9552;
+}
+
+#content {
+	opacity: 0;
+	position: absolute;
+	top: 50%;
+	margin-top: -113px;
+	width: 100%;
+}
+
+.intro {
+	position: relative;
+}
+
+.intro p {
+	margin: 0;
+	text-transform: uppercase;
+}
+
+#position {
+	width: 0;
+	font-size: 24px;
+	font-weight: 300;
+	background: #FF9552;
+	color: #fff;
+	height: 50px;
+	line-height: 50px;
+	text-indent: -9999px;
+	overflow: hidden;
+}
+
+.intro .name {
+	font-weight: 700;
+	height: 88px;
+	line-height: 81px;
+	font-size: 120px;
+}
+
+.intro .last {
+	padding-left: 430px;
+	line-height: 78px;
+}
+
+#kExtension {
+	height: 2px;
+	width: 21px;
+	display: block;
+	margin-left: 7px;
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAABCAYAAAA8TpVcAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MDVFRDY0NjJDMTcxMTFFM0EwNDBCRDMwQzNGRUJGM0IiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MDVFRDY0NjNDMTcxMTFFM0EwNDBCRDMwQzNGRUJGM0IiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDowNUVENjQ2MEMxNzExMUUzQTA0MEJEMzBDM0ZFQkYzQiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDowNUVENjQ2MUMxNzExMUUzQTA0MEJEMzBDM0ZFQkYzQiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Psj2R00AAAAXSURBVHjaYnQNjhdgYGB4z0A5UAQIMACN+QIZnXxv6gAAAABJRU5ErkJggg==);
+	background-repeat: repeat-y;
+}
+
+
+/**
+ * Purple color scheme
+ */
+
+/*body {
+	background: #372e3d;
+	color: #fff;
+}
+
+#position {
+	background: #423849;
+}*/
