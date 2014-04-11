@@ -1,7 +1,9 @@
+'use strict';
+
 var app = app || {};
+var utils = app.utils;
 
 app.animations = (function() {
-	'use strict';
 
 	var showName = function() {
 		var contentContainer = document.getElementById('content');
@@ -21,17 +23,16 @@ app.animations = (function() {
 
 		    var mouseX = event.clientX;
 		    var mouseY = event.clientY;
-		    var header = document.getElementsByTagName('body')[0];
-		    header.style.backgroundPosition = mouseX/3 + 'px ' + mouseY/3 + 'px';
+		    var body = document.getElementsByTagName('body')[0];
+		    body.style.backgroundPosition = mouseX/3 + 'px ' + mouseY/3 + 'px';
 		}, false);
 	};
 
 	var showSocial = function() {
 		var socialNav = document.getElementById('socialNav');
 		socialNav.addEventListener('click', function () {
-			console.log(1)
 		    var extensionContainer = document.getElementById('kExtension');
-		    extensionContainer.className += ' active';
+		    utils.toggleClass('active', extensionContainer);
 		}, false);
 	};
 
@@ -40,7 +41,7 @@ app.animations = (function() {
 		showPosition();
 		moveBackground();
 		showSocial();
-	}
+	};
 
 	return {
 		init: init
