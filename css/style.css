@@ -175,7 +175,7 @@ nav a:hover {
 .intro .name {
 	font-weight: 700;
 	height: 88px;
-	line-height: 81px;
+	line-height: 79px;
 	font-size: 120px;
 }
 
@@ -185,7 +185,6 @@ nav a:hover {
 }
 
 #kExtension {
-	height: 2px;
 	width: 21px;
 	display: block;
 	margin-left: 7px;
